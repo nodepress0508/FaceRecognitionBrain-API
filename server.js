@@ -24,9 +24,10 @@ const app = express();
 
 app.use(bodyParser.json());
 app.use(cors());
-// app.get("/", (req, res) => {
-//   res.send("it is working");
-// });
+
+app.get("/", (req, res) => {
+  res.send("it is working!");
+});
 //sign in API
 app.post("/signin", (req, res) => {
   signin.handlesignin(req, res, db, bcrypt);
